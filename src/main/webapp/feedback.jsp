@@ -15,7 +15,7 @@
 		class="content_container py-4 d-flex flex-column justify-content-center align-items-center">
 		<h3 class="text-white">Fill the feedback form:</h3>
 	
-		<form action="/feedback" class="mt-3 text-white">
+		<form action="<%= application.getContextPath() %>/feedback" method="post"  class="mt-3 text-white">
 		 
 		<!-- email field -->
 			<div class="mb-3">
