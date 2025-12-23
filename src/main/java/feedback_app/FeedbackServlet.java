@@ -15,10 +15,25 @@ public class FeedbackServlet extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
+	    String email = req.getParameter("email");
+	    String phone = req.getParameter("phone");
+	    String feedbackMessage = req.getParameter("feedback_message");
+		
+		
+		
 		resp.setContentType("text/html");
 	    PrintWriter writer = resp.getWriter();
 	    
-	    writer.print("Feedback servlet working");
+	    writer.println("<h1>Feedback servlet working</h1>");
+	    
+	    writer.println("""
+	    		 
+	    		     <h2>Form detail that you have submitted</h2>
+	    		     <h3>Email address %s </h3>
+	    		     <h3>Phone number %s </h3>
+	    		     <h3>Feedback message %s </h3>
+	    		  
+	    		      """.formatted(email,phone,feedbackMessage));
 	
 	
 	}

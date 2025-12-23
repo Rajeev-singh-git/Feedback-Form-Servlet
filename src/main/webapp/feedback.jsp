@@ -28,12 +28,12 @@
 			</div>
 			<div class="mb-3">
 				<label for="exampleInputPassword1" class="form-label">Phone number</label>
-				<input placeholder="Enter here" type="text" class="form-control"
+				<input name="phone" placeholder="Enter here" type="text" class="form-control"
 					id="exampleInputPassword1">
 			</div>
 			<div class="mb-3">
 				<label for="exampleInputPassword1" class="form-label">Your feedback Message</label>
-				<textarea rows="10" placeholder="Enter here" class="form-control"></textarea>
+				<textarea name="feedback_message" rows="10" placeholder="Enter here" class="form-control"></textarea>
 			</div>	
 			<div class="container text-center">
 				<button type="submit" class="btn btn-warning">Submit</button>
