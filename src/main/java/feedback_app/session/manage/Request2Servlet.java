@@ -22,16 +22,27 @@ public class Request2Servlet extends HttpServlet {
 		
 		var flag = false;
 		
+		StringBuilder content = new StringBuilder();
+		
 		
 		if(cookies!=null) {
+			
 			
 			for(Cookie c:cookies) {
 				String name = c.getName();
 				if(name.equals("username")) {
 					System.out.println("username : " + c.getValue());
-					writer.println("""
+					content.append("""
 							
 							 	 <h1>Welcome : %s</h1>
+							
+							     """.formatted(c.getValue()));
+					flag = true;
+				}else if(name.equals("userid")){
+					System.out.println("username : " + c.getValue());
+					content.append("""
+							
+							 	 <h1>Userid : %s</h1>
 							
 							     """.formatted(c.getValue()));
 					flag = true;
@@ -39,8 +50,11 @@ public class Request2Servlet extends HttpServlet {
 			}		
 		}
 		
-		
-		if(!flag) {
+		if(flag) {
+			writer.println("<h1>User is present</h1>");
+			writer.print(content);
+		}else
+		{
 			writer.println("<h1>No username found in cookies</h1>");
 			writer.println("<h1>Username cookie is not there in request</h1>");
 		}
