@@ -12,7 +12,14 @@
     <%@include file="header.jsp" %> 
     
     <div  style="height:80vh" class="content_container py-4 d-flex flex-column justify-content-center align-items-center">
+    
       <a href="<%= application.getContextPath() %>/feedback.jsp" class="btn btn-light">Give us Feedback</a>
+      
+      <a href="<%= application.getContextPath() %>/servlet1" class="btn mt-5 btn-light">Go to Servlet 1</a>
+      
+      <a href="<%= application.getContextPath() %>/servlet2" class="btn mt-5 btn-light">Go to Servlet 2</a>
+      
+      
     </div>
     
     
