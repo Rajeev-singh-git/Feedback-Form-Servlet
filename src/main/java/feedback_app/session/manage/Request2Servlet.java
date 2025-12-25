@@ -8,6 +8,7 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/servlet2")
 public class Request2Servlet extends HttpServlet {
@@ -49,6 +50,14 @@ public class Request2Servlet extends HttpServlet {
 				}
 			}		
 		}
+		
+		HttpSession session = req.getSession();
+		String secret = (String)session.getAttribute("userSecret");
+		content.append("""
+				
+			 	 <h1>Session secret : %s</h1>
+			
+			     """.formatted(secret));
 		
 		if(flag) {
 			writer.println("<h1>User is present</h1>");
