@@ -48,5 +48,16 @@
         <servlet-name>servlet2</servlet-name>
         <url-pattern>/servlet2</url-pattern>
     </servlet-mapping>
+    
+    <filter>
+   	    <filter-name>authFilter</filter-name>
+        <filter-class>feedback_app.filter.AuthFilter</filter-class>
+	</filter>
+
+   <filter-mapping>
+       <filter-name>authFilter</filter-name>
+       <url-pattern>/servlet2</url-pattern>
+    </filter-mapping>
+    
 
 </web-app>

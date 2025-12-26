@@ -15,9 +15,9 @@
     
       <a href="<%= application.getContextPath() %>/feedback.jsp" class="btn btn-light">Give us Feedback</a>
       
-      <a href="<%= application.getContextPath() %>/servlet1" class="btn mt-5 btn-light">Go to Servlet 1</a>
+      <a href="<%= application.getContextPath() %>/servlet1" class="btn mt-5 btn-light">Go to Servlet 1 (Create Session) </a>
       
-      <a href="<%= application.getContextPath() %>/servlet2" class="btn mt-5 btn-light">Go to Servlet 2</a>
+      <a href="<%= application.getContextPath() %>/servlet2" class="btn mt-5 btn-light">Go to Servlet 2  (Protected) </a>
       
       
     </div>
