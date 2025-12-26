@@ -26,9 +26,7 @@ public class FeedbackServlet extends HttpServlet{
 	    req.setAttribute("email", email);
         req.setAttribute("phone", phone);
         req.setAttribute("feedbackMessage", feedbackMessage);
-        
-        
-        
+               
 
         // 3. Forward to JSP (VIEW) 
         // RequestDispatcher in action: Server-side forward to JSP using the same request
