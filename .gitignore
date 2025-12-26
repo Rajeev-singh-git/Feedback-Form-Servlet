@@ -1,0 +1,18 @@
+# ===== Maven =====
+target/
+*.war
+
+# ===== Compiled classes =====
+*.class
+
+# ===== Eclipse =====
+.classpath
+.project
+.settings/
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Logs =====
+*.log
