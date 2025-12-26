@@ -11,8 +11,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebServlet("/servlet1")
-public class Request1servlet extends HttpServlet {
+//@WebServlet("/servlet1")
+public class Request1Servlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -28,7 +28,7 @@ public class Request1servlet extends HttpServlet {
 		 resp.addCookie(cookie);
 		 resp.addCookie(cookie1);
 		 
-        //http session
+         //http session
 		 HttpSession session = req.getSession();
 		 session.setAttribute("userSecret", UUID.randomUUID().toString());
 		 
