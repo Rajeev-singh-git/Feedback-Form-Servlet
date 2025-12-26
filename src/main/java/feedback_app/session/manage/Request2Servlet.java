@@ -2,6 +2,8 @@ package feedback_app.session.manage;
 
 import java.io.IOException;
 
+import jakarta.servlet.ServletConfig;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.Cookie;
@@ -51,6 +53,14 @@ public class Request2Servlet extends HttpServlet {
 			}		
 		}
 		
+		 ServletConfig servletConfig = getServletConfig();
+		 ServletContext servletContext  =  servletConfig.getServletContext();
+		 
+		 String appName = servletContext.getInitParameter("app_name");		 
+		 String userEmail = servletConfig.getInitParameter("userEmail");
+		 
+
+		
 		HttpSession session = req.getSession();
 		String secret = (String)session.getAttribute("userSecret");
 		content.append("""
@@ -67,6 +77,13 @@ public class Request2Servlet extends HttpServlet {
 			writer.println("<h1>No username found in cookies</h1>");
 			writer.println("<h1>Username cookie is not there in request</h1>");
 		}
+		
+		 resp.getWriter().print("""
+			 		
+		 	     	<h1>Context Params : %s </h1>
+		 	     	<h1>Init Params : %s </h1>
+		 		
+		 		  		""".formatted(appName,userEmail));
 		
 	}
 }

@@ -16,8 +16,8 @@
         <servlet-class>
             feedback_app.session.manage.Request1Servlet
         </servlet-class>
-
-        <!-- Servlet-level init param -->
+        
+         <!-- Servlet-level init param -->
         <init-param>
             <param-name>userName</param-name>
             <param-value>Rajeev</param-value>
@@ -30,8 +30,8 @@
         <servlet-class>
             feedback_app.session.manage.Request2Servlet
         </servlet-class>
-
-        <!-- Servlet-level init param -->
+        
+          <!-- Servlet-level init param -->
         <init-param>
             <param-name>userEmail</param-name>
             <param-value>rajeev@mail.com</param-value>
